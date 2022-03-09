@@ -2,10 +2,11 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 const path = require("path");
-const cors = require("cors");
 
+// const cors = require("cors");
 // app.use(cors());
 // app.options("*", cors());
+
 app.use(express.static(path.join(__dirname, "templates")));
 
 const animeImgs = fs.readdirSync(`${__dirname}/templates/imgs/anime`, "utf-8");
